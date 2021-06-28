@@ -1,7 +1,7 @@
 <template>
 <div :class="[task.reminder ? 'reminder' : '', 'task']">
   <h3>{{ task.text }}
-    <i@click="onDelete()" class="fas fa-trash-alt"></i>
+    <i@click="onDelete()" class="fas fa-trash-alt">
   </h3>
   <p>{{ task.day }}</p>
   </div>
