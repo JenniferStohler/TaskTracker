@@ -1,7 +1,7 @@
 <template>
-<div class="task">
+<div :class="[task.reminder ? 'reminder' : '', 'task']">
   <h3>{{ task.text }}
-    <i class="fas fa-trash-alt"></i>
+    <i@click="onDelete()" class="fas fa-trash-alt"></i>
   </h3>
   <p>{{ task.day }}</p>
   </div>
@@ -16,6 +16,9 @@ export default {
 }
 </script>
 <style scoped>
+.fas {
+  color: red;
+}
 .task {
   background : #f4f4f4;
   margin: 5px;
